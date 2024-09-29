@@ -1,0 +1,95 @@
+/* Styles for hero section */
+.hero {
+    background: linear-gradient(to right, #0066ff, #00ccff);
+    color: white;
+    padding: 100px 0;
+    text-align: center;
+    clip-path: polygon(0 0, 100% 0, 100% 85%, 0% 100%);
+}
+
+.hero-title {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    color: #ffffff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.hero-subtitle {
+    font-size: 1.5rem;
+    color: #dcdcdc;
+    margin-bottom: 40px;
+}
+
+.hero-btn {
+    font-size: 1.25rem;
+    padding: 10px 20px;
+    border-radius: 50px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.hero-btn:hover {
+    background-color: #004080;
+    transform: scale(1.05);
+}
+
+/* Styles for features section */
+.features {
+    padding: 80px 0;
+    background-color: #f8f9fa;
+    text-align: center;
+}
+
+.feature-item {
+    margin-bottom: 40px;
+    padding: 30px;
+    border-radius: 15px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background-color: #ffffff; /* White background for contrast */
+    border: 2px solid #007bff; /* Blue border for distinction */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+.feature-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Stronger shadow on hover */
+}
+
+.feature-icon {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    color: #007bff;
+}
+
+.feature-title {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #007bff;
+}
+
+.feature-description {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #495057;
+}
+
+/* Styles for footer */
+.footer {
+    background-color: #343a40;
+    padding: 20px 0;
+    text-align: center;
+    color: #f8f9fa;
+}
+
+.footer p {
+    margin: 0;
+    color: #adb5bd;
+}
+
+/* General styles */
+.container {
+    max-width: 1200px;
+}
+
+h1, h3, p {
+    margin: 0 0 20px;
+}
