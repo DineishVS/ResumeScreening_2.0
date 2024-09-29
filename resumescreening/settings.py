@@ -1,5 +1,17 @@
 from pathlib import Path
 import os
+from django.core.management.base import BaseCommand
+
+class Command(BaseCommand):
+    help = 'Lists static files collected'
+
+    def handle(self, *args, **options):
+        static_root = os.path.join(BASE_DIR, 'staticfiles')
+        if os.path.exists(static_root):
+            files = os.listdir(static_root)
+            self.stdout.write(f"Collected static files: {files}")
+        else:
+            self.stdout.write("Static root directory does not exist.")
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -101,11 +113,11 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/dev/howto/static-files/
 
 STATIC_URL = '/static/'
-
+STATIC_ROOT = os.path.join(BASE_DIR/'staticfiles')
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR / 'assets')
     ]
-STATIC_ROOT = os.path.join(BASE_DIR/'staticfiles')
+
 STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
 # Media files (Uploaded files)
 MEDIA_URL = '/media/'
