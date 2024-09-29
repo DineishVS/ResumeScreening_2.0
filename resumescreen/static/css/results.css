@@ -1,0 +1,104 @@
+/* Global styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 800px;
+    margin: auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+}
+
+/* Result container and boxes */
+.result-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+
+.result-box {
+    width: 48%;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    background-color: #f8f9fa; /* Match hero section background */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.result-box:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+.result-box h2 {
+    color: #007bff; /* Primary color for titles, matches upload.css */
+    font-size: 2rem; /* Larger font size */
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1); /* Subtle text shadow */
+}
+
+.category-info, .extracted-info {
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+}
+
+.category {
+    font-size: 1.5rem; /* Larger font size */
+    color: #28a745; /* Green color for category, matches upload.css */
+}
+
+.recommended-job {
+    font-size: 1.25rem; /* Slightly larger font size */
+    color: #dc3545; /* Red color for recommended job, matches upload.css */
+}
+
+.extracted-info p {
+    margin-bottom: 8px;
+}
+
+.extracted-info div {
+    margin-bottom: 15px;
+}
+
+.extracted-info h3 {
+    color: #343a40; /* Dark color for titles, matches hero section */
+    font-size: 1.5rem; /* Larger font size */
+    margin-bottom: 10px;
+}
+
+.extracted-info .skills ul,
+.extracted-info .education ul {
+    list-style: none;
+    padding-left: 20px;
+}
+
+.extracted-info .skills ul li,
+.extracted-info .education ul li {
+    margin-bottom: 5px;
+}
+
+/* Back button */
+.back-button {
+    display: inline-block;
+    padding: 12px 24px;
+    background-color: #007bff; /* Primary color for buttons, matches upload.css */
+    color: #fff;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+    margin-top: 20px;
+}
+
+.back-button:hover {
+    background-color: #0056b3; /* Darker shade on hover */
+}

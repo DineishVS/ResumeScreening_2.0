@@ -1,0 +1,65 @@
+{% include 'navbar.html' %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume Analysis Result</title>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/results.css' %}">
+</head>
+<body>
+    <div class="container">
+        <h1>Resume Screening</h1>
+        <div class="result-container">
+            <div class="result-box">
+                <h2>Category</h2>
+                <div class="category-info">
+                    <p><strong>Category:</strong></p>
+                    <p class="category">{{ predicted_category }}</p>
+                    <p><strong>Recommended Job:</strong></p>
+                    <p class="recommended-job">{{ recommended_job }}</p>
+                </div>
+            </div>
+
+            <div class="result-box">
+                <h2>Extracted Information</h2>
+                <div class="extracted-info">
+                    <p><strong>Name:</strong> {{ name }}</p>
+                    <p><strong>Phone No:</strong> {{ phone }}</p>
+                    <p><strong>Email:</strong> {{ email }}</p>
+
+                    {% if extracted_skills %}
+                    <div>
+                        <p><strong>Skills</strong></p>
+                        <ul class="list-unstyled skills">
+                            {% for skill in extracted_skills %}
+                            <li>{{ skill }}</li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+                    {% else %}
+                    <p class="text-center">No skills found.</p>
+                    {% endif %}
+
+                    {% if extracted_education %}
+                    <div>
+                        <h3>Education</h3>
+                        <ul class="list-unstyled education">
+                            {% for edu in extracted_education %}
+                            <li>{{ edu }}</li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+                    {% else %}
+                    <p class="text-center">No Education found.</p>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+        <div class="text-center">
+            <a href="{% url 'upload_resume' %}" class="back-button">Go Back</a>
+        </div>
+    </div>
+</body>
+</html>

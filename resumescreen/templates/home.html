@@ -1,0 +1,57 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Resume Tools</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/home.css' %}">
+</head>
+<body>
+    {% include 'navbar.html' %}
+    <section class="hero">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 mx-auto text-center">
+                    <h1 class="hero-title">Welcome to Resume Tools</h1>
+                    <p class="hero-subtitle">Streamline your hiring process with advanced resume extraction and parsing.</p>
+                    <a href="#features" class="btn btn-primary btn-lg hero-btn">Learn More</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="features" class="features">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="feature-item">
+                        <div class="feature-icon">
+                            <i class="fas fa-file-alt"></i>
+                        </div>
+                        <h3 class="feature-title">Resume Extractor</h3>
+                        <p class="feature-description">Extract contact details, skills, and education from resumes automatically.</p>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="feature-item">
+                        <div class="feature-icon">
+                            <i class="fas fa-search"></i>
+                        </div>
+                        <h3 class="feature-title">Resume Parser</h3>
+                        <p class="feature-description">Analyze resumes for keywords, skills, and experience relevant to job descriptions.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer class="footer">
+        <div class="container text-center">
+            <p>&copy; 2024 Resume Tools. All rights reserved.</p>
+        </div>
+    </footer>
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
